@@ -2,7 +2,7 @@
 title: 240722~240728_Weekly I Did & Learned
 date: 2024-07-28 17:53:00 +0900
 categories: [Achievement ]
-tags: [] # TAG names should always be lowercase
+tags: [WID, WIL] # TAG names should always be lowercase
 ---
 
 # 했던것.
