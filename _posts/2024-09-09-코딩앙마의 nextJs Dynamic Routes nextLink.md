@@ -21,14 +21,18 @@ tags: [nextJs, 코딩앙마] # TAG names should always be lowercase
 ## Link
 
 - 1. next/link의 Link 컴포넌트
+
+```jsx
   // 구현 코드
   <Link href="/home">HOME</Link>
   // 빌드 결과
   <a href="/home">HOME</a>
-  빌드 후, a tag로 자동 변환된다.
-  a tag 의 장점을 갖는다. (SEO 최적화, prefetch 가능, 우클릭 기능 사용 가능 등)
-  페이지 렌더링 시점에, 이동할 주소가 정해져 있는 경우 사용
-  내부 페이지로의 이동 시, 이 방식을 사용해야 SPA 방식으로 전체 html중 필요한 부분만 리렌더링 된다.
+```
+
+빌드 후, a tag로 자동 변환된다.
+a tag 의 장점을 갖는다. (SEO 최적화, prefetch 가능, 우클릭 기능 사용 가능 등)
+페이지 렌더링 시점에, 이동할 주소가 정해져 있는 경우 사용
+내부 페이지로의 이동 시, 이 방식을 사용해야 SPA 방식으로 전체 html중 필요한 부분만 리렌더링 된다.
 
 2. router.push()
    빌드 후, 이동할 주소가 html 상에 노출되지 않기 때문에 SEO에 취약하다.
