@@ -1,6 +1,6 @@
 ---
 title: 게시글 생성 테스트 및 참고 자료 정리.
-date: 2024-07-16 10:43:00 +0900
+date: 2024-01-02 10:43:00 +0900
 categories: [Tutorial]
 tags: [jekyll, test, 수고했어] # TAG names should always be lowercase
 ---
