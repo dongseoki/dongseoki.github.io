@@ -24,6 +24,11 @@ tags: [jekyll, test, 수고했어] # TAG names should always be lowercase
 bundle exec jekyll serve
 ```
 
+```sh
+# 댓글 기능 테스트.
+JEKYLL_ENV=production bundle exec jekyll serve
+```
+
 - 로컬 테스트 블로그 주소
   - http://127.0.0.1:4000/
 - 운영 블로그 주소
