@@ -38,3 +38,10 @@ tags: [aws] # TAG names should always be lowercase
   * 기타?
     * 초 집중 필요.
       * 뽀모도로 시간 초과시 잠시 빠져나오기 연습하기.
+
+## lab 최종 실습 가즈아
+![](assets/img/posts/2024-11-23-18-04-47.png)
+
+![](assets/img/posts/2024-11-23-18-04-56.png)
+* vpc and more로 생성까지 했다!
+* 비용이 살짝 걱정되지만, 다음에 할게 좀 남았으니 그 부분을 추후 고민해보자.
