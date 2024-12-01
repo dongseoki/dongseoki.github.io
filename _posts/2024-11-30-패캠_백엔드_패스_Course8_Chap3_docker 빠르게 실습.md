@@ -11,3 +11,11 @@ tags: [docker] # TAG names should always be lowercase
 ![](assets/img/posts/2024-11-30-14-41-47.png)
 
 ![](assets/img/posts/2024-11-30-14-50-21.png)
+
+![](assets/img/posts/2024-12-01-11-29-42.png)
+
+![](assets/img/posts/2024-12-01-14-40-41.png)
+
+* 멀티스테이지 빌드에 대해서 공부.
+
+* 05장 Amazon ECR 공부 중.
