@@ -8,6 +8,7 @@ tags: [docker] # TAG names should always be lowercase
 ## 실습 가즈아
 * create REpo
 ![](assets/img/posts/2024-12-06-09-01-25.png)
+```sh
 aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
 
 
@@ -19,6 +20,14 @@ docker tag webapp:v1 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com/dslee/myr
 docker push 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com/dslee/myrepo:v1
 
 docker run -d --name webapp_ecr 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com/dslee/myrepo:v1
+
+docker build -t webapp:v1  .
+
+
+docker buildx build --platform linux/amd64,linux/arm64 -t webapp:v2  .
+
+docker tag webapp:v2 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com/dslee/myrepo:v2
+```
 
 ## 참고
 https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html
