@@ -49,6 +49,15 @@ Runtime Monitoring
 
 * 12분 45초 까지 테스트 완료함.
 
+* IAM 역할 생성후, task Definition 등록이 이어짐.
+* 다음 ECS의 service 생성.
+* ALB Target group 생성. ECS 메뉴 가서 생성.nginx-alb-tg
+* 그다음 ALB 생성. ECS 메뉴 가서 생성. nginx-alb
+ * ALB 옵션중 Application Load Balancer 선택.
+![](assets/img/posts/2024-12-11-21-09-46.png)
+* 낭패다. 적어도 2가지 subnet을 써야한다고 하는데, 강사님의 개발 환경과 다른 듯하다.
+* 이 부분을 반드시 추후 체크하자.
+* 그리고 강사님은 alb 링크로 접속하여 nginx 잘 됨을 확인하였다. 이상!
 ## ECR Fargate 실습.
 * ECS : EC2 인스턴스 안에 배포
 * Fargate : 서버리스 컨테이너 배포
