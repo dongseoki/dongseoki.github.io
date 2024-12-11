@@ -39,6 +39,7 @@ Runtime Monitoring
 
 
 ## ECR ec2 활용 실습
+![](assets/img/posts/2024-12-11-21-25-33.png)
 * 일단 ecs role 부터 생성했었음.
 
 * 그리고 클러스터 생성을 테스트했었음.
@@ -58,9 +59,40 @@ Runtime Monitoring
 * 낭패다. 적어도 2가지 subnet을 써야한다고 하는데, 강사님의 개발 환경과 다른 듯하다.
 * 이 부분을 반드시 추후 체크하자.
 * 그리고 강사님은 alb 링크로 접속하여 nginx 잘 됨을 확인하였다. 이상!
+
+*  삭제 하기 중 이상
+![](assets/img/posts/2024-12-11-21-13-58.png)
+* 뭐지 이건?
+* 일단 역순 삭제 완료 : alg target -> ecs service -> ecs cluster 제거.
 ## ECR Fargate 실습.
+![](assets/img/posts/2024-12-11-21-25-14.png)
 * ECS : EC2 인스턴스 안에 배포
 * Fargate : 서버리스 컨테이너 배포
+* 순서는 위 그림대로
+* 참고
+  * ECS service 생성시 서비스 연결 켜기 온 할것!
+![](assets/img/posts/2024-12-11-21-40-06.png)
+* 이럴수가 lastest 처럼 태그 틀려서 service 실행중 오류 떴다..
+* Fargate는 CloudWatch의 로그로 볼수 있다.
+* Fargate는 서버리스이기 떄문에 ECS 탭에 아무것도 안보이는 것을 볼 수 있음.
+* 처음 접속에 실패해서 낙담했다.
+* 왜 나는 안된걸까?
+* discord 채널에 문의하기 전에, 아 claudeAi 찬스를 써야겠다고 다짐.
+  *
+```sh
+aws ecs에서 fargate를 이용한 실습을 진행하고 있어. 분명 service 까지는 잘 실행이 되었어. task에 주어진 public IP로 접속하니까 nginx hello world 가 뜨거든(이미지가 nginx니까)
+
+그리고 alb target group을 생성했고, alb 생성시, target group과 이어주었으며, secure group 은 inbound 80포트로의 모든 ip 요청을 허용하고, outbound 는 기본값. 그렇게 alb 를 생성했어. alb를 생성해서 받은 domain 주소로 접속하니 연결이 안되. 그니까 연결을 장시간 대기하다가 끊겨. 실습 강사님은 잘 되는데, 뭐가 문제일까 어디를 봐야할까
+```
+* 이렇게 문의하니 보이는 결과들..
+
+* 원인 찾아서
+![](assets/img/posts/2024-12-11-22-21-44.png)
+* 접속 성공
+  * 원인은 nginx alb의 subnet 설정시 연결할 서브넷을 targetgroup이 있는 public subnet이 아니라, private subnet을 연결했던 것이 문제였다.
+  * 그런데 그럴싸 한데, nat가 private subnet으로 대신 연결해주니까 가능해야하는거 아닌가 이런 생각을 잠시 했었다.
+  * 이건 추후 보자!
+
 
 ## 리소스 삭제 실습.
 
