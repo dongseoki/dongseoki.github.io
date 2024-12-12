@@ -50,3 +50,15 @@ aws ec2 describe-route-tables --route-table-ids   "preview-rtb-private-1" "previ
 
 ![](assets/img/posts/2024-12-12-09-09-25.png)
 * 일단 실습은 계속 진행중...! image 생성 완료,
+* 설정이 잘되었는지 확인하는 방법
+  * aws configure list
+
+  Laws cli docker push 하려는데 no basic auth credentials 오류가 떠.EditECR에 Docker 이미지를 푸시할 때 이 오류가 발생하는 것은 ECR 인증이 되지 않았기 때문입니다. 다음 단계로 해결할 수 있습니다:
+
+먼저 AWS ECR 로그인 명령어를 실행합니다:
+```
+aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com
+```
+![](assets/img/posts/2024-12-12-13-15-02.png)
+![](assets/img/posts/2024-12-12-13-15-47.png)
+* task definition 까지 생성 완료.
