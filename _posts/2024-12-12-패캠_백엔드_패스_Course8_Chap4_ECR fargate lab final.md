@@ -62,3 +62,37 @@ aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS
 ![](assets/img/posts/2024-12-12-13-15-02.png)
 ![](assets/img/posts/2024-12-12-13-15-47.png)
 * task definition 까지 생성 완료.
+* service까지 생성 완료
+
+그럼 요청을 private Subnet에 있는 이 EC2 인스턴스로 연결시키는 방법은?
+
+
+Private Subnet에 있는 EC2에 접근하는 방법은 몇 가지가 있습니다:
+
+AWS Systems Manager Session Manager 사용
+가장 권장되는 방법입니다
+인터넷 게이트웨이나 배스천 호스트 없이도 접근 가능
+EC2에 SSM Agent 설치 필요
+VPC 엔드포인트(Systems Manager용) 구성 필요
+배스천 호스트(Bastion Host) 사용
+Public Subnet에 배스천 호스트를 두고, 이를 통해 Private Subnet의 EC2에 접근
+SSH 터널링을 통한 접근
+
+Copy
+ssh -i key.pem ec2-user@private-ip -J ec2-user@bastion-public-ip
+Application Load Balancer(ALB) 사용
+Public Subnet에 ALB를 위치시키고 Private Subnet의 EC2를 타겟 그룹으로 설정
+웹 애플리케이션의 경우 유용한 방법
+AWS Site-to-Site VPN 또는 Direct Connect 사용
+기업 네트워크와 AWS VPC를 직접 연결
+보안성이 높지만 설정이 복잡하고 비용이 발생
+VPC 엔드포인트와 Private Link 사용
+특정 AWS 서비스나 엔드포인트 서비스와 통신할 때 사용
+인터넷을 통하지 않는 프라이빗 통신 가능
+어떤 방법을 선택할지는 다음을 고려하시면 좋습니다:
+
+보안 요구사항
+비용
+관리 복잡도
+접근 패턴(임시 접속인지 상시 접속인지)
+가장 현대적이고 관리가 용이한 방법은 Systems Manager Session Manager입니다. 특별한 이유가 없다면 이 방식을 먼저 고려해보시는 것을 추천드립니다.
