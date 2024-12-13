@@ -96,3 +96,37 @@ VPC 엔드포인트와 Private Link 사용
 관리 복잡도
 접근 패턴(임시 접속인지 상시 접속인지)
 가장 현대적이고 관리가 용이한 방법은 Systems Manager Session Manager입니다. 특별한 이유가 없다면 이 방식을 먼저 고려해보시는 것을 추천드립니다.
+
+
+![](assets/img/posts/2024-12-12-21-02-43.png)
+* 성공?
+* alb의 dns:8080 포트로 접속되는 것은 이해했다.
+  * 그런데, public subnet에 있는 ec2에서 왜 접속이 안되지?
+
+## 해설을 보자.
+* 궁금증
+  * EC2에서 연결이 왜 안되었던 것인가?
+* IP 블록 실수 -> 수정을 안했네.(다음엔 수정하자.)
+* public subnet 클릭수 public IP 활성화 -> EC2생성시 자동 할당을 위해
+* 해결
+  * EC2를 다른 VPC에 설치했네.. 이런..!
+* task정의시 8080 연결 설정 잘함.
+* cluster, service private subnet에 만들고
+* service는 22 8080 허용.
+* fargate의 subnet은 public subnet해야해
+![](assets/img/posts/2024-12-12-21-27-40.png)
+* alb는 public 존, fargate는 private subnet에 있다.
+* 어떻게 갈수 있냐? NAT를 통해서 갈수 있는거!
+
+* 리소스 정리
+  * 역순
+  * 로드밸런서 삭제 하자~
+  * 타겟 그룹 삭제하자~
+  * ecs 서비스 삭제하자
+  * 태스크 정의는 선택
+  * 클러스터 삭제~
+  * VPC 가서
+  * NAT 부터 삭제~~
+  * nat 삭제 상태일때 탄력적 IP 릴리즈
+  * ec2 종료~~
+  * VPC 가서 VPC 삭제(EC2 삭제를 기다려~)
