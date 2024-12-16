@@ -48,6 +48,7 @@ RUN jenkins-plugin-cli \
     workflow-aggregator \
     blueocean \
     docker-plugin \
+    docker-workflow \
     ant \
     gradle \
     pipeline-aws \
