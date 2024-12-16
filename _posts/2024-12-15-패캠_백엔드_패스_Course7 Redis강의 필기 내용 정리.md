@@ -1,8 +1,8 @@
 ---
-title: 패캠_백엔드_패스_Course7 강의 필기 내용 정리
+title: 패캠_백엔드_패스_Course7 Redis강의 필기 내용 정리
 date: 2024-12-15 09:55:00 +0900
 categories: [fastcampusBackendPath]
-tags: [Redis, Webflux, 대용량 ] # TAG names should always be lowercase
+tags: [Redis, 대용량 ] # TAG names should always be lowercase
 ---
 
 ## 필기 가자
@@ -93,3 +93,41 @@ scan 2305234 match * cont 100
   * 빈등록하여 공통 설정을 반영.
   * @Cachable 실습.
     * RedisCacheManager를 사용하여 ttl 적용이 가능함.
+
+
+### spring boot session store
+* spring boot session
+* spring boot redis
+* session은 HMSET으로 저장됨.
+
+### spring pubsub
+* addMessageListener
+* RedisMessageListenContainer 의 빈등록이 필요함.
+#### 이번엔 publish
+* redCOT.cASend
+
+### 19 mornitoring
+```sh
+--stat
+--bigkey
+--memkey
+--latency
+```
+* Cloud Native Foundation
+* maxMemoryPolicy를 레디스에 설정 가능.
+
+* 메모리 정책 
+  * 메모리 정책은 maxmemory-policy 설정 값으로 정하면 된다. 이 값도 redis.conf 파일이나 config set 명령문으로 변경할 수 있다. 
+  * MAX MEMORY만큼 메모리를 사용하게 되면, 메모리 정책에 따라 과거에 만들어진 키들이 삭제된다.  
+출처: https://americanopeople.tistory.com/179 [복세편살:티스토리]
+* 삭제 정책
+  * allkeys-random
+  * allkeys-lru
+* 컨테이너 이름으로 도메인 이름 사용이 가능.
+* redis exporter : 프로메테우스가 redis Exporter 를 이용해서 레디스 정보를 조회한다고 들음.
+*  그라파나용 redis 대쉬보드도 있음.
+
+### 20. Replication
+* redis.conf에서 설정 가능.
+* offset을 활용하면 끊어진 부분부터 동기화도 가능함.
+* master 재실행시 연결 확인하는 테스트도 했었음.
