@@ -89,9 +89,12 @@ docker run --name jenkins -d \
 
 
 docker run --name jenkins -d \
-    -v ~/.docker/run:/var/run/docker.sock \
-    -p 80:8080 jenkins-ci
+    -v ~/.docker/run/docker.sock:/var/run/docker.sock \
+    -p 81:8080 jenkins-ci
 
+docker run --name jenkins2 -d \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -p 80:8080 jenkins-cli:v2
 
 ### 실습1 pectric 완.
 ![](assets/img/posts/2024-12-15-17-30-23.png)

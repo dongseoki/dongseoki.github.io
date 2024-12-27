@@ -80,7 +80,7 @@ RUN jenkins-plugin-cli \
 ```sh
 docker run --name jenkins2 -d \
     -v ~/.docker/run/docker.sock:/var/run/docker.sock \
-    -p 81:8080 jenkins-cli
+    -p 8090:8080 jenkins-ci:v2
 ```
 로 만들고 docker inspect로 반드시 확인하기.
 * 간단히 만든 docker item test 도 참고하자.
