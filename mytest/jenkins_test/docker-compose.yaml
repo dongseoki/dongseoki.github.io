@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:2.491-jdk17
+    ports:
+      - "8100:8080"
+      - "50002:50000"
+    volumes:
+      - ~/util/fast_campus/jenkins_test:/var/jenkins_home
+      # - /var/run/docker.sock:/var/run/docker.sock
