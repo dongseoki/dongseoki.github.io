@@ -6,7 +6,7 @@ tags: [http, session, http session, sesion clustering] # TAG names should always
 ---
 
 ## 필기 가자
-세션 ID와 쿠키를 이용한 상태 유지 방식을 학습하고, 로컬 세션, 중앙 집중형 세션, 분산 세션 관리 방식의 특징과 장단점을 비교합니다. 또한, Sticky Session, Session Replication, Centralized Session Store와 같은 세션 클러스터링 전략의 동작 원리를 배우고, 단일 서버와 분산 서버 환경에서 세션 데이터 관리의 차이점을 실습으로 익힙니다. 
+세션 ID와 쿠키를 이용한 상태 유지 방식을 학습하고, 로컬 세션, 중앙 집중형 세션, 분산 세션 관리 방식의 특징과 장단점을 비교합니다. 또한, Sticky Session, Session Replication, Centralized Session Store와 같은 세션 클러스터링 전략의 동작 원리를 배우고, 단일 서버와 분산 서버 환경에서 세션 데이터 관리의 차이점을 실습으로 익힙니다.
 
 **세션의 주요 특징**:
 
@@ -67,3 +67,4 @@ tags: [http, session, http session, sesion clustering] # TAG names should always
 
 
 ## 수업 내용 필기 정리.
+* session 의 단점들 : 다른 서버의 세션 공유는 다른 접근 필요.
