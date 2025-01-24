@@ -12,7 +12,7 @@ tags: [aws] # TAG names should always be lowercase
 * 원인 : default VPC의 IGW의 부재.
 * 내가 예전에 아 다 지워야해 해서 싹다 지웠던 것이였다.
 * 그래서 했던 조치는
-* https://velog.io/@tlsalsckd13/AWS-%EA%B8%B0%EB%B3%B8-VPC-%EB%A7%8C%EB%93%A4%EA%B8%B0
+* https://velog.io/@tlsalsckd13/aws-%EA%B8%B0%EB%B3%B8-VPC-%EB%A7%8C%EB%93%A4%EA%B8%B0
 * 여기 글을 참고하여
 * IGW생성.
 * 라우팅 테이블에 모든 외부 연결에 만든 IGW연결.

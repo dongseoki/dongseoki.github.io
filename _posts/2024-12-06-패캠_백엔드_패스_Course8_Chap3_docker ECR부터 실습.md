@@ -9,10 +9,10 @@ tags: [docker] # TAG names should always be lowercase
 * create REpo
 ![](assets/img/posts/2024-12-06-09-01-25.png)
 ```sh
-aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+aws ecr get-login-password --region region | docker login --username aws --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
 
 
-aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com
+aws ecr get-login-password --region ap-northeast-2 | docker login --username aws --password-stdin 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com
 
 docker tag webapp:v1 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com/dslee/myrepo:v1
 

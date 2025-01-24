@@ -2,7 +2,7 @@
 title: 패캠_백엔드_패스_Course8_Chap4_ECR fargate lab final
 date: 2024-12-12 08:30:00 +0900
 categories: [fastcampusBackendPath]
-tags: [ECR, ECS, AWS, Fargate] # TAG names should always be lowercase
+tags: [ECR, ECS, aws, Fargate] # TAG names should always be lowercase
 ---
 
 ## final lab 실습 가즈아
@@ -55,9 +55,9 @@ aws ec2 describe-route-tables --route-table-ids   "preview-rtb-private-1" "previ
 
   Laws cli docker push 하려는데 no basic auth credentials 오류가 떠.EditECR에 Docker 이미지를 푸시할 때 이 오류가 발생하는 것은 ECR 인증이 되지 않았기 때문입니다. 다음 단계로 해결할 수 있습니다:
 
-먼저 AWS ECR 로그인 명령어를 실행합니다:
+먼저 aws ECR 로그인 명령어를 실행합니다:
 ```
-aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com
+aws ecr get-login-password --region ap-northeast-2 | docker login --username aws --password-stdin 727646484333.dkr.ecr.ap-northeast-2.amazonaws.com
 ```
 ![](assets/img/posts/2024-12-12-13-15-02.png)
 ![](assets/img/posts/2024-12-12-13-15-47.png)
@@ -69,7 +69,7 @@ aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS
 
 Private Subnet에 있는 EC2에 접근하는 방법은 몇 가지가 있습니다:
 
-AWS Systems Manager Session Manager 사용
+aws Systems Manager Session Manager 사용
 가장 권장되는 방법입니다
 인터넷 게이트웨이나 배스천 호스트 없이도 접근 가능
 EC2에 SSM Agent 설치 필요
@@ -83,11 +83,11 @@ ssh -i key.pem ec2-user@private-ip -J ec2-user@bastion-public-ip
 Application Load Balancer(ALB) 사용
 Public Subnet에 ALB를 위치시키고 Private Subnet의 EC2를 타겟 그룹으로 설정
 웹 애플리케이션의 경우 유용한 방법
-AWS Site-to-Site VPN 또는 Direct Connect 사용
-기업 네트워크와 AWS VPC를 직접 연결
+aws Site-to-Site VPN 또는 Direct Connect 사용
+기업 네트워크와 aws VPC를 직접 연결
 보안성이 높지만 설정이 복잡하고 비용이 발생
 VPC 엔드포인트와 Private Link 사용
-특정 AWS 서비스나 엔드포인트 서비스와 통신할 때 사용
+특정 aws 서비스나 엔드포인트 서비스와 통신할 때 사용
 인터넷을 통하지 않는 프라이빗 통신 가능
 어떤 방법을 선택할지는 다음을 고려하시면 좋습니다:
 

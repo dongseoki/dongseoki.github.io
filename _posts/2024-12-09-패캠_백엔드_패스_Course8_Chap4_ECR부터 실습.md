@@ -2,7 +2,7 @@
 title: 패캠_백엔드_패스_Course8_Chap4_ECR부터 실습
 date: 2024-12-09 08:20:00 +0900
 categories: [fastcampusBackendPath]
-tags: [ECR, ECS, AWS] # TAG names should always be lowercase
+tags: [ECR, ECS, aws] # TAG names should always be lowercase
 ---
 
 ## 실습 가즈아
@@ -99,4 +99,4 @@ aws ecs에서 fargate를 이용한 실습을 진행하고 있어. 분명 service
 ## 참고
 
 https://docs.aws.amazon.com/ko_kr/AmazonECS/latest/developerguide/Welcome.html
-https://ksh-coding.tistory.com/134#1.%20AWS%20ECS%EB%9E%80%3F-1
+https://ksh-coding.tistory.com/134#1.%20aws%20ECS%EB%9E%80%3F-1

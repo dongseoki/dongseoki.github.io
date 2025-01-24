@@ -14,7 +14,7 @@ pipeline {
     agent any
     environment {
        ECR_REPO = "727646484333.dkr.ecr.ap-northeast-2.amazonaws.com"
-       AWS_CREDENTIALS="aws-login"
+       aws_CREDENTIALS="aws-login"
        ECR_NAME = "petclinic"
        REGION = "ap-northeast-2"
        IAM_ROLE_NAME = "arn:aws:iam::727646484333:role/ecr-registry-full-access"
@@ -36,8 +36,8 @@ pipeline {
             steps{
                 script{
                     try {
-                        withAWS(region: "${REGION}",credentials: "${AWS_CREDENTIALS}", role: "${IAM_ROLE_NAME}", roleAccount: "${ROLE_ACCOUNT}", externalId: 'externalId') {
-                            sh 'aws ecr get-login-password --region ${REGION} | docker login --username AWS --password-stdin  ${ECR_REPO}'
+                        withaws(region: "${REGION}",credentials: "${aws_CREDENTIALS}", role: "${IAM_ROLE_NAME}", roleAccount: "${ROLE_ACCOUNT}", externalId: 'externalId') {
+                            sh 'aws ecr get-login-password --region ${REGION} | docker login --username aws --password-stdin  ${ECR_REPO}'
                             sh 'docker build -t ${ECR_NAME} .'
                             sh 'docker tag ${ECR_NAME}:latest ${ECR_REPO}/${ECR_NAME}:v$BUILD_NUMBER'
                             sh 'docker push ${ECR_REPO}/${ECR_NAME}:v$BUILD_NUMBER'
