@@ -2,7 +2,7 @@
 title: spring_web_mvc_vs_webflux
 date: 2024-12-15 09:55:00 +0900
 categories: [fastcampusBackendPath]
-tags: [Webflux, 대용량 ] # TAG names should always be lowercase
+tags: [webflux, 대용량 ] # TAG names should always be lowercase
 ---
 
 ## 필기 가자
@@ -18,7 +18,7 @@ CPU 바운드 작업(CPU 사용량이 높은 작업).
 응답 시간 및 성능:
 동시 요청이 적을 때는 응답 시간이 빠르고 안정적.
 요청이 많아지면 성능이 급격히 저하될 수 있음(스레드 부족 현상).
-2. Spring WebFlux
+2. Spring webflux
 기본 모델: 비동기(Asynchronous) 및 논블로킹(Non-blocking) 방식.
 요청 처리 방식:
 요청이 들어오면, Netty나 서블릿 3.1+ 기반 컨테이너를 사용해 비동기적으로 처리.
@@ -31,7 +31,7 @@ I/O 바운드 작업(데이터베이스, 외부 API 호출 등)과 대규모 동
 동시 요청이 많아질수록 성능 이점이 증가.
 요청 수가 적은 경우 Web MVC와 비슷하거나 약간 느릴 수 있음(이벤트 루프의 오버헤드 때문).
 성능 비교
-특징	Spring Web MVC	Spring WebFlux
+특징	Spring Web MVC	Spring webflux
 처리 모델	동기, 블로킹	비동기, 논블로킹
 최대 동시 요청 처리	제한적 (스레드 풀 크기 의존)	매우 많음 (이벤트 루프 활용)
 응답 시간	적은 요청에서는 빠름	동시 요청이 많을수록 효율적
@@ -39,8 +39,8 @@ I/O 바운드 작업(데이터베이스, 외부 API 호출 등)과 대규모 동
 사용 사례	CPU 바운드 작업	I/O 바운드 작업 및 대규모 트래픽 처리
 시간 측면에서의 요약
 Spring Web MVC: 낮은 동시성 시나리오에서는 처리 속도가 빠르지만, 동시 요청 증가 시 처리 시간이 선형적으로 증가합니다.
-Spring WebFlux: 동시 요청 수가 증가해도 처리 시간이 급격히 늘어나지 않으며, I/O 바운드 작업에서 특히 유리합니다.
+Spring webflux: 동시 요청 수가 증가해도 처리 시간이 급격히 늘어나지 않으며, I/O 바운드 작업에서 특히 유리합니다.
 선택 기준
 동시성이 중요하지 않고, 기존의 레거시 코드와 호환성이 중요하다면 Spring Web MVC.
-동시 요청 처리가 중요하고, 클라우드 환경에서 확장성을 고려해야 한다면 Spring WebFlux를 선택하세요.
+동시 요청 처리가 중요하고, 클라우드 환경에서 확장성을 고려해야 한다면 Spring webflux를 선택하세요.
 특정 시나리오에 대한 성능을 정확히 비교하려면, 실제 애플리케이션에 대한 부하 테스트를 수행하는 것이 가장 효과적입니다.

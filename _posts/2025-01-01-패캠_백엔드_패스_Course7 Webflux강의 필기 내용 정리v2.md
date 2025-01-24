@@ -1,8 +1,8 @@
 ---
-title: 패캠_백엔드_패스_Course7 Webflux강의 필기 내용 정리v2
+title: 패캠_백엔드_패스_Course7 webflux강의 필기 내용 정리v2
 date: 2025-01-01 09:55:00 +0900
 categories: [fastcampusBackendPath]
-tags: [Webflux, 대용량 ] # TAG names should always be lowercase
+tags: [webflux, 대용량 ] # TAG names should always be lowercase
 ---
 
 ## 필기 가자
@@ -41,9 +41,9 @@ tags: [Webflux, 대용량 ] # TAG names should always be lowercase
 * @transient : DB에 persist 대상이 아님을 명시할 때 사용.
 * 커스텀 쿼리의 사용 방식 : databaseClient라는 것을 사용했었음.
 
-### Reactive Redis
+### Reactive redis
 * 이것도 초기 검증 추가 로직 필요.
-* ReactiveRedisTemplate 활용.
+* ReactiveredisTemplate 활용.
 * 공식문서 참고.
 * unlink 기능
   -  비동기로 key를 삭제하는 기능임.
@@ -66,7 +66,7 @@ tags: [Webflux, 대용량 ] # TAG names should always be lowercase
 #### 진입 요청 API
 * 진입 가능성 조회
 * 진입 허용
-* EmbededRedis 추가
+* Embededredis 추가
 * stepVerifier 사용
 
 #### 대기열 웹페이지

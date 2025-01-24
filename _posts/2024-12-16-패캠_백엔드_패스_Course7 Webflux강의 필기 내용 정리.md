@@ -1,8 +1,8 @@
 ---
-title: 패캠_백엔드_패스_Course7 Webflux강의 필기 내용 정리
+title: 패캠_백엔드_패스_Course7 webflux강의 필기 내용 정리
 date: 2024-12-15 09:55:00 +0900
 categories: [fastcampusBackendPath]
-tags: [Webflux, 대용량 ] # TAG names should always be lowercase
+tags: [webflux, 대용량 ] # TAG names should always be lowercase
 ---
 
 ## 필기 가자
@@ -15,7 +15,7 @@ tags: [Webflux, 대용량 ] # TAG names should always be lowercase
   * 동기식 프레임워크의 일종.
 * Reactive
   * 대량 접속에 유리.
-* 
+*
 
 ### Reactive 이론
 * Reaactive Stream

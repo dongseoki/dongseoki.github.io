@@ -1,8 +1,8 @@
 ---
-title: 패캠_백엔드_패스_Course7 Redis강의 필기 내용 정리
+title: 패캠_백엔드_패스_Course7 redis강의 필기 내용 정리
 date: 2024-12-15 09:55:00 +0900
 categories: [fastcampusBackendPath]
-tags: [Redis, 대용량 ] # TAG names should always be lowercase
+tags: [redis, 대용량 ] # TAG names should always be lowercase
 ---
 
 ## 필기 가자
@@ -10,7 +10,7 @@ tags: [Redis, 대용량 ] # TAG names should always be lowercase
   * 요청에 대응하는 1대1 쓰레드 1개가 대응
     * 단점 : 대용량 트래픽 처리시, 메모리 낭비가 있을수 있음.
 * 적은 메모리로 대량 IO를 어떻게 처리할까?
-  * 이때 Webflux라는 비동기 web framework 를 이용하면 가능.
+  * 이때 webflux라는 비동기 web framework 를 이용하면 가능.
 
 ### redis
 * 6.2버전 쓸거임.
@@ -83,7 +83,7 @@ scan 2305234 match * cont 100
 ### spring boot cache
 * opsForValue set
 * getter 누락, 기본 생성자.
-* @RedisCache
+* @redisCache
 * evict :삭제 기능.
 * createJedisPool
   * 이것을 빈등록해서 실습.
@@ -92,7 +92,7 @@ scan 2305234 match * cont 100
 * CacheConfig설정 필요.
   * 빈등록하여 공통 설정을 반영.
   * @Cachable 실습.
-    * RedisCacheManager를 사용하여 ttl 적용이 가능함.
+    * redisCacheManager를 사용하여 ttl 적용이 가능함.
 
 
 ### spring boot session store
@@ -102,7 +102,7 @@ scan 2305234 match * cont 100
 
 ### spring pubsub
 * addMessageListener
-* RedisMessageListenContainer 의 빈등록이 필요함.
+* redisMessageListenContainer 의 빈등록이 필요함.
 #### 이번엔 publish
 * redCOT.cASend
 
