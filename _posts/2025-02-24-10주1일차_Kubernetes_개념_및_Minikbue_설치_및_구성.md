@@ -25,6 +25,8 @@ Kube-Proxy는 iptables, IPVS 등의 방법을 사용하여 네트워크 트래�
 Minikube는 Kubernetes를 로컬 환경에서 단일 노드 클러스터로 실행할 수 있도록 설계된 도구입니다.
 
 kubectl은 Kubernetes 클러스터와 상호 작용하는 표준 커맨드라인 도구입니다.
+Addons과 같은 추가 기능을 활용해 Ingress, monitoring, logging 등을 간단히 설정하고 사용할 수 있습니다.
+
 ## 궁금증
 * k8s에서 오브젝트와 컴포넌트의 차이?
 
