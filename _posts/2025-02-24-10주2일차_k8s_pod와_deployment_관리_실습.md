@@ -6,6 +6,9 @@ tags: [] # TAG names should always be lowercase
 ---
 
 ## 필기 내용
+```sh
+kubectl [command] [TYPE] [NAME] [flags]
+```
 - kubectl apply -f <파일명>.yaml을 통해 YAML 파일 기반 배포
 - 실행 중인 리소스를 조회 (`kubectl get pods`, `kubectl get deployments`)
 - 리소스의 상태와 이벤트 확인 (`kubectl describe <리소스> <이름>`)
