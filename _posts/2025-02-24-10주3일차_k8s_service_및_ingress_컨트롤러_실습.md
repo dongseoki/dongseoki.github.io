@@ -15,7 +15,7 @@ tags: [] # TAG names should always be lowercase
 
 **프로브(Probe)** 는 컨테이너가 정상적으로 동작하는지, 트래픽을 받을 준비가 되었는지, 또는 아직 초기화 중인지 **애플리케이션의 상태 등을 확인하기 위해 사용되는 진단 도구**
 
-## **1.1 Service 타입**
+### **1.1 Service 타입**
 
 1. **ClusterIP (기본)**
 2. NodePort
@@ -26,6 +26,8 @@ tags: [] # TAG names should always be lowercase
 ## Action Plan
 
 ## 수업 내용 필기 정리.
-* 서비스를 1개의 클러스터로 운영했다가
+* selector: 이 서비스가 트래픽을 라우팅할 파드를 선택하는 데 사용되는 레이블 셀렉터입니다.
+  * app: nginx-for-svc: app 레이블이 nginx-for-svc인 파드를 선택합니다.
+* 멀티클러스터는 어제 써요? : 서비스를 1개의 클러스터로 운영했다가
   * 장애 이슈떄문에 멀티 클러스터로 바꾸기도 했다.
-  *
+
