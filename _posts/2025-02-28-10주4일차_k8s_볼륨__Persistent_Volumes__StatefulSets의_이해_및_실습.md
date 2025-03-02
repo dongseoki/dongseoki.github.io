@@ -1,6 +1,6 @@
 ---
-title: 10주4일차
-date: 2025-01-25 09:05:00 +0900
+title: 10주4일차_k8s_볼륨__Persistent_Volumes__StatefulSets의_이해_및_실습
+date: 2025-02-28 16:20:00 +0900
 categories: [Software Development]
 tags: [] # TAG names should always be lowercase
 ---
