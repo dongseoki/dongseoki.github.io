@@ -26,3 +26,13 @@ tags: [] # TAG names should always be lowercase
 - ElasticSearch는 **TF-IDF(Term Frequency - Inverse Document Frequency)** 및 **BM25(Best Matching 25)** 알고리즘을 사용하여 검색 결과의 순위를 정합니다.
 - TF-IDF는 **문서 내에서 단어의 중요도를 계산하는 대표적인 검색 알고리즘**입니다.
 ![](assets/img/posts/2025-03-03-16-18-45.png)
+
+
+## 내 프로젝트의 어디에 넣으면 될지 문의
+
+🔹 로그 시각화(Kibana)는 초기에 도입 가능
+🔹 검색 기능은 사용자가 많아지고 데이터가 쌓일 때 추가하는 게 적절
+🔹 습관 히스토리 검색, 챌린지 검색, 추천 기능 등에 활용 가능
+🔹 운영 부담이 적다면 Meilisearch 같은 가벼운 대안도 고려 가능
+
+지금 당장 ES를 도입할 필요는 없지만, 미래 확장성을 고려해서 데이터 구조를 잘 설계해두는 것이 중요해! 🔥
