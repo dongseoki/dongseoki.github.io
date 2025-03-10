@@ -30,4 +30,3 @@ tags: [] # TAG names should always be lowercase
   * app: nginx-for-svc: app 레이블이 nginx-for-svc인 파드를 선택합니다.
 * 멀티클러스터는 어제 써요? : 서비스를 1개의 클러스터로 운영했다가
   * 장애 이슈떄문에 멀티 클러스터로 바꾸기도 했다.
-
