@@ -19,9 +19,8 @@ categories: []
 tags: [] # TAG names should always be lowercase
 ---
 
-# ${TITLE}
+## 내용
 
-- 내용
 EOL
 
 echo "Post created: $FILENAME"
