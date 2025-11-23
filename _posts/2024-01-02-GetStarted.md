@@ -45,3 +45,8 @@ JEKYLL_ENV=production bundle exec jekyll serve
 
 - 포스팅 자주하기!
 - 블로그 업그레이드!
+
+# 주의사항
+
+- 게시글 제목에 ":" 넣지 말것. 기타 특수문자 금지
+- 태그에 큰따옴표 넣지 말것.
