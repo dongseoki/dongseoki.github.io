@@ -16,6 +16,10 @@ tags: [jekyll, test, 수고했어] # TAG names should always be lowercase
 ---
 ```
 
+# mac에서 설치하는 방법
+* https://1221jyp.com/posts/github-blog_1/
+* 설치 ruby 버전 : 3.3.10
+
 # 로컬에서 블로그를 실행하는 방법
 
 - 로컬에서 블로그를 실행하는 명령어
