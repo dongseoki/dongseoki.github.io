@@ -1,7 +1,18 @@
 # 시작 방법.
 
+
 # 로컬에서 블로그를 실행하는 방법
 
+## 실행환경 조성(Ubuntu)
+1. rvm install(link : https://github.com/rvm/ubuntu_rvm)
+2. reboot
+3. rvm install ruby-3.3.10
+4. ruby --version
+5. gem --version
+6. bundle --version
+7. bundle install
+
+## 로컬에서 블로그 실행
 - 로컬에서 블로그를 실행하는 명령어
 
 ```sh
